@@ -178,7 +178,7 @@ User Action → Redux Action → Saga Intercepts → AsyncStorage Save → API C
 
 ### Amount Validation
 - Minimum: 0.01
-- Maximum: 999,999,999
+- Maximum: 9999
 - Maximum 2 decimal places
 - No leading zeros (except 0.xx)
 - Real-time formatting prevents invalid input
@@ -221,10 +221,7 @@ User Action → Redux Action → Saga Intercepts → AsyncStorage Save → API C
 - ✅ Consistent styling with Material Design principles
 - ✅ Proper error handling and user feedback
  
-## Troubleshooting
- 
-### iOS Build Issues
-```bash
+
 # Clean iOS build
 cd ios
 rm -rf build Pods Podfile.lock
@@ -234,34 +231,21 @@ npm start -- --reset-cache
 ```
 
 ### Android Build Issues
-```bash
-# Clean Android build
+
 cd android
 ./gradlew clean
 cd ..
 npm start -- --reset-cache
 ```
 
-### Metro Bundler Issues
-```bash
+
 # Reset cache
 npm start -- --reset-cache
 
-# Kill process on port 8081
-lsof -ti:8081 | xargs kill
+
 ```
  
-## Future Enhancements
- 
-- [ ] Task deletion
-- [ ] Task categories/tags
-- [ ] Sort and filter options
-- [ ] Search functionality
-- [ ] Real backend integration
-- [ ] User authentication
-- [ ] Dark mode
-- [ ] Unit and integration tests
- 
+
 ## License
  
 MIT License
